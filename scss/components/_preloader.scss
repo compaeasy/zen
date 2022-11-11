@@ -1,0 +1,141 @@
+/* _preloader.scss */
+
+.preloader {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &.dark {
+    background: #333;
+  }
+
+  &__wrapper {
+    position: relative;
+    width: 10vh;
+    height: 10vh;
+    animation: rotate 3s infinite linear;
+    z-index: 11;
+    border: 1px dashed #fff;
+    border-radius: 50%;
+  }
+
+  &__item {
+    position: absolute;
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background: #333;
+    border: #000;
+    border-radius: 50%;
+    // animation: bounce 2s infinite ease-in-out;   
+    z-index: 12;
+
+    &:nth-child(1) {
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      
+      animation: bounce-primary 2s infinite ease-in-out; 
+
+      @keyframes bounce-primary {
+        0% {
+          transform: translate(-50%, -50%) scale(1);
+        }
+        50% {
+          transform: translate(-50%, -50%) scale(0);
+        }
+        100% {
+          transform: translate(-50%, -50%) scale(1);
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      top: 50%;
+      right: 0;
+      transform: translate(50%, -50%);
+      animation: bounce-secondary 2s infinite ease-in-out; 
+
+      @keyframes bounce-secondary {
+        0% {
+          transform: translate(50%, -50%) scale(0);
+        }
+        50% {
+          transform: translate(50%, -50%) scale(1);
+        }
+        100% {
+          transform: translate(50%, -50%) scale(0);
+        }
+      }      
+    }
+
+    &:nth-child(3) {
+      
+      bottom: 0;
+      right: 50%;
+      // transform: translateX(50%) translateY(50%);
+      animation: bounce-tertiary 2s infinite ease-in-out;
+
+      @keyframes bounce-tertiary {
+        0% {
+          transform: translate(50%, 50%) scale(1);
+        }
+        50% {
+          transform: translate(50%, 50%) scale(0);
+        }
+        100% {
+          transform: translate(50%, 50%) scale(1);
+        }
+      }      
+      
+    }
+
+    &:nth-child(4) {
+      left: 0; 
+      top: 50%;    
+      transform: translateX(-50%) translateY(-50%);
+      animation: bounce-quaternary 2s infinite ease-in-out;
+
+      @keyframes bounce-quaternary {
+        0% {
+          transform: translate(-50%, -50%) scale(0);
+        }
+        50% {
+          transform: translate(-50%, -50%) scale(1);
+        }
+        100% {
+          transform: translate(-50%, -50%) scale(0);
+        }      
+      }
+    }
+  }
+
+  @keyframes rotate {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  &.green {
+    border: 2px dashed green;
+  }
+
+  &.yellow {
+    border: 2px dashed yellow;
+  }
+
+  &.red {
+    border: 2px dashed red;
+  }
+
+  &.blue {
+    border: 2px dashed blue;
+  }
+}

@@ -1,0 +1,59 @@
+//  Секция
+
+const $root = document.querySelector('#root')
+const section = document.createElement('section')
+section.classList = 'section'
+
+// Заголовок
+
+const title = document.createElement('h1')
+title.textContent = 'Peaceful shopping mindful money'
+title.classList = section.classList + '__title'
+
+// Текст
+
+const copy = document.createElement('p')
+copy.textContent = 'See how we can help with making your shopping experience and money management more ZEN.'
+copy.classList = section.classList + '__copy'
+
+// Картинка 
+
+const image = document.createElement('img')
+image.src = '/image/1.png'
+image.classList = section.classList + '__image'
+
+//  Секция Primary
+
+const sectionPrimary = document.createElement('section')
+sectionPrimary.classList = 'section'
+
+// Заголовок Primary 
+
+const titlePrimary = document.createElement('h2')
+titlePrimary.textContent = '1-year warranty boost'
+titlePrimary.classList = section.classList + '__title'
+
+// Текст Primary
+
+const copyPrimary = document.createElement('p')
+const copyPrimarySecond = document.createElement('p')
+copyPrimary.textContent = 'ZEN cards have a very neat feature that will help you whenever your electronic devices start failing after the standard warranty ends, which is pretty common.'
+copyPrimarySecond.textContent = 'When you buy any electronics with your ZEN shopping Mastercard, their warranty gets extended by one year. How does it work? It simply does. Automatically.'
+copyPrimary.classList = section.classList + '__copy'
+copyPrimarySecond.classList = section.classList + '__copy'
+
+// Картинка Primary
+
+const imagePrimary = document.createElement('img')
+imagePrimary.src = '/image/2.png'
+imagePrimary.classList = section.classList + '__image'
+
+$root.append(section, sectionPrimary)
+section.append(title, copy, image)
+sectionPrimary.append(titlePrimary, copyPrimary, copyPrimarySecond, imagePrimary)
+
+// console.log($root.toString())
+
+console.dir(HTMLDivElement)
+
+// console.dir(Document)

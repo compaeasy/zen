@@ -1,0 +1,23 @@
+------------------------------------
+Fetch
+------------------------------------
+
+Fetch - это глобальная функция браузера для получения данных из сети, по определенному url (base url) без перезагрузки страницы и возвращает Promise.
+
+По умолчанию функция Fetch выполняет get запрос.
+
+Синтаксис: 
+fetch(url, init)
+
+url - обязательный аргумент, куда выполняется запрос.
+init - не обязательный аргумент, объект настроек запроса.
+
+Пример запроса. 
+const API_BASE_URL = 'https://abc.com/data.json'
+
+fetch(API_BASE_URL)
+  .then((response) => response.json())
+  .then((data) => consol.log(data))
+  .catch(error) => consol.error(error))
+
+  response - ответ

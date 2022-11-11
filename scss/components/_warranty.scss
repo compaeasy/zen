@@ -1,0 +1,110 @@
+/* warranty */ 
+
+.warranty {
+  background: inherit;
+  padding: 30px 0;
+  
+
+  &__wrapper {
+    @media (min-width: $breakpoint-md) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      // border: 2px dashed aqua;
+    }
+
+    @media (min-width: $breakpoint-lg) {
+      gap: 40px;
+    }
+
+    @media (min-width: $breakpoint-xl) {
+      gap: 110px;
+    }
+  }
+  
+  &__body {
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // border: 2px dashed lightgreen;
+  }
+
+  &__title {
+    font-size: 26px;
+    font-weight: 700;
+    color: currentColor;
+
+    @media (min-width: $breakpoint-md) {
+      font-size: 30px;
+    }
+
+    @media (min-width: $breakpoint-lg) {
+      font-size: 34px;
+    }
+
+    @media (min-width: $breakpoint-xl) {
+      font-size: 40px;
+    }
+  }
+
+  &__copy {
+    margin-top: 10px;
+
+    @media (min-width: $breakpoint-lg) {
+      font-size: 18px;
+      line-height: 170%;
+    }
+
+    @media (min-width: $breakpoint-xl) {
+      font-size: 20px;
+      margin-top: 20px;
+    }
+
+    &:first-of-type {
+      margin-top: 20px;
+
+      @media (min-width: $breakpoint-xl) {
+        margin-top: 30px;
+      }
+    }
+  }
+
+  &__image {
+    margin-top: 30px;
+    height: 80vw; // vieport-width 80% от ширины экрана
+    // height: 40vh; // vieport-height 40% от высоты экрана
+    border: 1px solid #aaa;
+    border-radius: 20px;
+    overflow: hidden; // скрывает выступающие элементы границы внутри себя
+
+    @media (min-width: $breakpoint-md) {
+      margin-top: 0;
+      height: 260px;
+    }
+
+    @media (min-width: $breakpoint-lg) {
+      height: 350px;
+    }
+
+    @media (min-width: $breakpoint-xl) {
+      height: 400px;
+    }
+    
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; // равномерное растягивание картинки
+      transition: 0.5s;
+
+      @media (min-width: $breakpoint-lg) {
+        &:hover {
+          cursor: pointer;
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}
+

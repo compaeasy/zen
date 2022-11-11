@@ -1,0 +1,38 @@
+/* _global.scss */
+
+body {
+  font-family: $font-family;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 150%;
+  padding-top: $height-header-xs;
+  color: #000;
+  background: #fff;
+
+  &.dark {
+    color: #fff;
+    background: #333;
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    padding-top: $height-header-lg;
+  }
+}
+
+.container {
+  padding: 0 15px;
+
+  @media (min-width: $breakpoint-md) {
+    max-width: $max-width-md;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    max-width: $max-width-lg;
+  }
+
+  @media (min-width: $breakpoint-xl) {
+    max-width: $max-width-xl;
+  }
+}
